@@ -1,2 +1,88 @@
-# jikyulife
-自給自足生活を可視化するアプリ
+
+# 🌾 自給ライフ可視化アプリ
+
+![Eyecatch](https://placehold.co/1200x300?text=Jikyulife+App+Visualize+Your+Harvest)
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Framework-Next.js-000?logo=next.js)](https://nextjs.org/)
+[![Supabase](https://img.shields.io/badge/Backend-Supabase-3FCF8E?logo=supabase)](https://supabase.io/)
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://vercel.com)
+
+> 自給的な暮らし（収穫、購入、保存食など）の記録を簡単に残し、カテゴリ別・月別に可視化するライフログWebアプリ
+
+---
+
+## 📌 概要
+
+スマホ対応・サーバーレス構成で、自給生活の「収穫・購入・保存」などの活動を記録。  
+グラフで進捗や傾向を把握でき、日々の暮らしを見える化します。
+
+---
+
+## 🚀 機能一覧（MVP）
+
+- ✅ ユーザー認証（Supabase Auth）
+- ✅ 記録の作成（日付・カテゴリ・数量・単位・写真・メモ）
+- ✅ 一覧表示（新しい順・カテゴリ/月別で絞込）
+- ✅ グラフ表示（カテゴリ別割合・月別記録数）
+- ✅ オフライン対応（IndexedDB + 後同期）
+
+---
+
+## 🧑‍🌾 想定ユーザー
+
+- 家庭菜園や自給的ライフスタイルを実践する方
+- 紙日記やエクセルからもっと手軽なログに移行したい方
+- 食の自立・暮らしの振り返りをしたい方
+
+---
+
+## 🗂 データベース構成（Supabase）
+
+テーブル：`entries`
+
+| カラム名     | 型        | 内容                            |
+|--------------|-----------|---------------------------------|
+| `id`         | uuid      | 主キー                          |
+| `user_id`    | uuid      | Supabase AuthのユーザーID       |
+| `date`       | date      | 記録の日付（デフォルト：今日）  |
+| `category`   | text      | 野菜、保存食、卵、購入など       |
+| `amount`     | numeric   | 任意数値（kg、個など）           |
+| `unit`       | text      | 単位（kg、個、束など）           |
+| `memo`       | text      | 自由記述メモ                    |
+| `image_url`  | text      | 画像のURL（Supabase Storage）    |
+| `created_at` | timestamp | 作成時刻                        |
+
+---
+
+## 🛠 使用技術
+
+- Frontend: **Next.js**, **Tailwind CSS**
+- Backend: **Supabase** (PostgreSQL + Auth + Storage)
+- Graphs: **Recharts**
+- Hosting: **Vercel**
+- Offline対応: **IndexedDB**
+
+---
+
+## 📈 今後のアイデア
+
+- カスタムカテゴリ／タグ管理
+- 前年比較・累積表示などの可視化強化
+- 音声入力や通知連携（LINEなど）
+- 天気・月齢データとの連携
+
+---
+
+## 🤖 AI活用アイデア
+
+- Tailwind + ReactのUI部品生成
+- グラフ用データ処理コードの生成
+- 音声入力の自然言語処理
+- 自動サマリー・振り返り機能
+
+---
+
+## 📄 ライセンス
+
+MIT
