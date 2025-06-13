@@ -1,0 +1,27 @@
+{
+  "name": "jikyulife",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun run next dev",
+    "build": "bun run next build",
+    "start": "bun run next start",
+    "lint": "bun run next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.5",
+    "next": "14.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.9.0",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.7",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "postcss": "^8.5.4",
+    "typescript": "^5.4.5"
+  }
+}
